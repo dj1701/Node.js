@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import Input from './input'
 import Button from './Button'
 import calculator from './StringCalculator'
@@ -16,4 +17,4 @@ class Calculator extends Component {
   }
 }
 
-export default Calculator
+ReactDOM.render(<Calculator/>, document.getElementById('root'));

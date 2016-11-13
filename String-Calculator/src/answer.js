@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Input from './input.js'
+import Input from './input'
 
 class Answer extends Component {
 

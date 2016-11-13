@@ -1,4 +1,4 @@
-var calculator = calculator || {};
+var stringcalculator = stringcalculator || {};
 
 (function (my) {
 		my.Add = function (value) {
@@ -19,6 +19,6 @@ var calculator = calculator || {};
 
 			return total;
 		}
-})(calculator);
+})(stringcalculator);
 
-module.exports = calculator;
+module.exports = stringcalculator;

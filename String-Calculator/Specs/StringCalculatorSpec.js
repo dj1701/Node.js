@@ -1,5 +1,5 @@
 var should = require('should');
-var calculator = require('../src/StringCalculator.js');
+var calculator = require('../src/stringcalculator.js');
 
 describe('String Calculator Tests', function(){
 	it('Return 0 for empty string ', function(){
