@@ -7,11 +7,11 @@ class Button extends Component {
     this.state = {value: ''};
   }
 
-  handleClick: function(evt) {
+  handleClick (evt) {
     this.setState({
       value: evt.target.value
     });
-  },
+  }
 
   render(){
     return (

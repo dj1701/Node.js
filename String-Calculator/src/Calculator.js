@@ -12,9 +12,9 @@ class Calculator extends Component {
           <Input value={'0'}/>
           <Answer />
           <Button value={'Add'}/>
-        <div/>
+        </div>
     )
   }
 }
 
-ReactDOM.render(<Calculator/>, document.getElementById('root'));
+export default Calculator;

@@ -8,22 +8,24 @@ class Input extends Component {
     this.state = {value: ''};
   }
 
-  handleChange: function(evt) {
+  handleChange (evt) {
     this.setState({
       value: evt.target.value
     });
-  },
+  }
 
-  reset: function() {
+  reset () {
     this.setState({
       value: "0"
     });
-  },
+  }
 
   render(){
     return (
+      <div>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
         <Button value="Reset" onclick={this.reset} />
+      </div>
     )
   }
 }
