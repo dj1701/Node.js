@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Button from './button'
+import MyButton from '../MyButton'
 
-class Input extends Component {
+class DataInput extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.reset = this.reset.bind(this);
   }
 
   handleChange (evt) {
@@ -20,14 +22,14 @@ class Input extends Component {
     });
   }
 
-  render(){
+  render() {
     return (
       <div>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <Button value="Reset" onclick={this.reset} />
+        <MyButton value="Reset" onClick={this.reset} />
       </div>
-    )
+    );
   }
 }
 
-export default Input
+export default DataInput
