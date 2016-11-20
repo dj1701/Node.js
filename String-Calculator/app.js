@@ -13,6 +13,10 @@ module.exports = (port) => {
     res.sendFile('bundle.js', { root: path.join(__dirname, '/public/dist/') });
   });
 
+  app.get("/private/health", (req, res) => {
+    res.sendStatus(200);
+  });
+
   app.get('/', (req, res) => {
      res.sendFile(path.join(__dirname, '/public/index.html'));
   });
