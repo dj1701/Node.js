@@ -11,10 +11,10 @@ describe('<DataInput /> ', () => {
       expect(unitUnderTest.find('MyButton').length).to.equal(1);
     });
 
-    it('should start with empty', () => {
-      const unitUnderTest = shallow(<DataInput />);
+    it('should start with zero', () => {
+      const unitUnderTest = shallow(<DataInput value={'0'}/>);
 
-      expect(unitUnderTest.state('value')).to.equal('')
+      expect(unitUnderTest.state('value')).to.equal('0')
     });
 
     it('should accept value to 1001', () => {

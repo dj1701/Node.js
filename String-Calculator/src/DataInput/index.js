@@ -5,7 +5,7 @@ class DataInput extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: this.props.value};
     this.handleChange = this.handleChange.bind(this);
     this.reset = this.reset.bind(this);
   }
@@ -26,7 +26,7 @@ class DataInput extends React.Component {
     return (
       <div>
         <input type="text" value={this.state.value} onChange={this.handleChange} />
-        <MyButton value="Reset" onClick={this.reset} />
+        <MyButton text="Reset" onClick={this.reset} />
       </div>
     );
   }

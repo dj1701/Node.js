@@ -10,8 +10,8 @@ class Calculator extends React.Component {
     return (
         <div>
           <DataInput value={'0'}/>
-          <MyButton value={'Add'}/>
           <Answer/>
+          <MyButton text={'Add'}/>
         </div>
     )
   }

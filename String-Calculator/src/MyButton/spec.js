@@ -11,7 +11,7 @@ describe('<MyButton /> ', () => {
     });
 
     it('should have text set to "Add"', () => {
-      const unitUnderTest = shallow(<MyButton />);
+      const unitUnderTest = shallow(<MyButton text="Add"/>);
       const button = unitUnderTest.find('button');
 
       expect(button.text()).to.be.equal('Add');
