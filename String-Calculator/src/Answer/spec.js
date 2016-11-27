@@ -5,8 +5,8 @@ import Answer from './index';
 
 describe('<Answer /> ', () => {
     it('Should render Answer', () => {
-      const unitUnderTest = shallow(<Answer />);
+      const unitUnderTest = mount(<Answer />);
 
-      expect(unitUnderTest.contains(<input type="text" id="answer"/>)).to.equal(true);
+      expect(unitUnderTest.find("input[id='answer']").length).to.equal(1);
     });
 });

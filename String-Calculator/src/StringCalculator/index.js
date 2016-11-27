@@ -4,7 +4,7 @@ var stringcalculator = stringcalculator || {};
 		my.Add = function (value) {
 			if(value === '') return 0;
 
-			var numbers = value.split(/[,\n]+/);
+			var numbers = value.split(/[,\\n]+/);
 
 			var result = sum(numbers);
 

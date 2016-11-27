@@ -1,6 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow, mount, render } from 'enzyme';
+import sinon from 'sinon';
 import MyButton from './index';
 
 describe('<MyButton /> ', () => {
@@ -16,4 +17,5 @@ describe('<MyButton /> ', () => {
 
       expect(button.text()).to.be.equal('Add');
     });
+
 });

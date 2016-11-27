@@ -33,7 +33,7 @@ describe('String Calculator Tests', function(){
 	});
 
 	it('Return 6 for the input of 1\\n2,3', function(){
-			var result = calculator.Add('1\n2,3');
+			var result = calculator.Add('1\\n2,3');
 
 			result.should.be.exactly(6);
 	});
