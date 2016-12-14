@@ -1,0 +1,35 @@
+{
+  "name": "prime-factors",
+  "version": "1.0.0",
+  "description": "Prime Factor Kata",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --compilers js:babel-register specs/setup.js src/**/*spec.js specs/application-spec.js"
+  },
+  "author": "David Jacobs",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.6.0",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.1",
+    "should": "^11.1.1",
+    "supertest": "^2.0.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "path": "^0.12.7",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}

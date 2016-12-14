@@ -1,0 +1,72 @@
+import { expect } from 'chai';
+import { should } from 'should';
+var primefactors = require('./index');
+
+describe('Prime Factor Tests', () => {
+
+  it('should throw expection with parameter with value 1', () => {
+    expect(() => {
+                primefactors.generate(1);
+            }).to.throw('Can not accept invalid parameter');
+  });
+
+  it('should throw expection with parameter of blank string', () => {
+    expect(() => {
+                primefactors.generate('');
+            }).to.throw('Can not accept invalid parameter');
+  });
+
+  it('should throw expection with parameter of null value', () => {
+    expect(() => {
+                primefactors.generate(null);
+            }).to.throw('Can not accept invalid parameter');
+  });
+
+  it('should throw expection with no parameter', () => {
+    expect(() => {
+                primefactors.generate();
+            }).to.throw('Can not accept invalid parameter');
+  });
+
+  it('should have prime factor of 2 with given parameter of 2', () => {
+    var result = primefactors.generate(2);
+    var expected = [2];
+
+    expect(result).to.eql(expected);
+  });
+
+  it('should have prime factor of 3 with given parameter of 3', () => {
+    var result = primefactors.generate(3);
+    var expected = [3];
+
+    expect(result).to.eql(expected);
+  });
+
+  it('should have prime factor of 2,2 with given parameter of 4', () => {
+    var result = primefactors.generate(4);
+    var expected = [2,2];
+
+    expect(result).to.eql(expected);
+  });
+
+  it('should have prime factor of 2,3 with given parameter of 6', () => {
+    var result = primefactors.generate(6);
+    var expected = [2,3];
+
+    expect(result).to.eql(expected);
+  });
+
+  it('should have prime factor of 2,2,2 with given parameter of 8', () => {
+    var result = primefactors.generate(8);
+    var expected = [2,2,2];
+
+    expect(result).to.eql(expected);
+  });
+
+  it('should have prime factor of 3,3 with given parameter of 9', () => {
+    var result = primefactors.generate(9);
+    var expected = [3,3];
+
+    expect(result).to.eql(expected);
+  });
+});
