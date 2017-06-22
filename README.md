@@ -1,6 +1,6 @@
 # Node.js
 
-This repository contains a number of Code Katas to enable Engineers to get up and running quickly with Node.js and React.js.
+This repository contains a number of Code Katas to enable Engineers to get up and running quickly with Node.js, React.js and Angular.js.
 
 Instruction on commands to use:
 -------------------------------
