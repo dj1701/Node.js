@@ -6,13 +6,13 @@ import PrimeFactor from './index';
 describe('<PrimeFactor /> ', () => {
   
     it('Should render PrimeFactor', () => {
-      const unitUnderTest = mount(<PrimeFactor />);
+      var unitUnderTest = mount(<PrimeFactor />);
 
       expect(unitUnderTest.find("input[id='given']").length).to.equal(1);
     });
 
     it('should call onClick Event to get prime factors from 10 resulting in 2,5', () => {
-      const unitUnderTest = shallow(<PrimeFactor />);
+      var unitUnderTest = shallow(<PrimeFactor />);
       unitUnderTest.setState({valueToFactorize: '10'});
 
       unitUnderTest.find("button[id='find']").simulate('click');
@@ -21,7 +21,7 @@ describe('<PrimeFactor /> ', () => {
     });
 
     it('should call onClick Event for reset to reinitialize state and fields', () => {
-      const unitUnderTest = shallow(<PrimeFactor />);
+      var unitUnderTest = shallow(<PrimeFactor />);
       unitUnderTest.setState({valueToFactorize: '101'});
 
       unitUnderTest.find("button[id='reset']").simulate('click');
@@ -31,7 +31,7 @@ describe('<PrimeFactor /> ', () => {
     });
 
     it('should from input value of 1001 from control to set state and compute result of 7,11,13', () => {
-      const unitUnderTest = shallow(<PrimeFactor />);
+      var unitUnderTest = shallow(<PrimeFactor />);
       unitUnderTest.setState({valueToFactorize: '1001'});
 
       unitUnderTest.find("button[id='find']").simulate('click');

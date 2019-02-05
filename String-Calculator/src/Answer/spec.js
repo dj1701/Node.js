@@ -5,7 +5,7 @@ import Answer from './index';
 
 describe('<Answer /> ', () => {
     it('Should render Answer', () => {
-      const unitUnderTest = mount(<Answer />);
+      var unitUnderTest = mount(<Answer />);
 
       expect(unitUnderTest.find("input[id='answer']").length).to.equal(1);
     });
