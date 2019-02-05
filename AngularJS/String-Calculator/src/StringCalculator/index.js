@@ -1,5 +1,3 @@
-var angular = require("angular");
-
 (function() {
     "use strict"
 

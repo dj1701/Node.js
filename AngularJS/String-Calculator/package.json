@@ -33,7 +33,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "DEBUG=express:* node index.js",
     "test": "mocha --compilers js:babel-register specs/setup.js src/**/*.js specs/application-spec.js"
   },
   "author": "",

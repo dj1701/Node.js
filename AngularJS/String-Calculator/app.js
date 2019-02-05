@@ -2,6 +2,7 @@
 
 const path = require('path');
 const express = require('express');
+const url = require('url');
 
 const app = express();
 
@@ -13,22 +14,28 @@ module.exports = (port) => {
     res.sendStatus(200);
   });
 
-  // catch 404 and forward to error handler
-  app.use((req, res, next) => {
-    var err = new Error('Not Found');
+  // catch 404 handler
+  app.get('*', function(req, res, next) {
+    var requestRrl = req.originalUrl;
+    try {
+        url.parse(requestRrl);
+        console.log("parsed " + requestRrl);
+    }
+    catch (e) {
+        var err = new Error();
+        err.status = 400;
+        console.error(e);
+        next(err);
+    }
+
+    var err = new Error();
     err.status = 404;
     next(err);
   });
 
-  // error handler
-  app.use((err, req, res, next) => {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
+  process.on('uncaughtException', (err) => {
+    console.log('whoops! There was an uncaught error', err);
+    process.exit(1);
   });
 
   // app.listen(4000, 'localhost', (err) => {
