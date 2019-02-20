@@ -7,7 +7,7 @@ var {User} = require('./models/user');
 
 var app = express();
 
-module.exports = (port) => {
+module.exports.app = (port) => {
 
     app.set('port', port || 4001);
 

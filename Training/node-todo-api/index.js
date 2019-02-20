@@ -1,9 +1,9 @@
 "use strict";
 
-const server = require('./server/server');
+const app = require('./server/server');
 
 const port = 4001;
 
-server(port);
+app(port);
 
-console.log('Listening at http://localhost:4001');
+console.log(`Listening at http://localhost:${port}`);
