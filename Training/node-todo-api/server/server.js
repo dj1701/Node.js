@@ -63,12 +63,12 @@ module.exports.app = (port) => {
             return res.status(404).send({status: 'Invalid Id'});
         }
 
-        Todo.findOneAndRemove(id).then((todo) => {
+        Todo.findByIdAndDelete(id).then((todo) => {
             if(!todo) {
                 return res.status(404).send({status: 'todo not found'});
             }
 
-            res.send(todo);
+            res.send({todo});
         }).catch((err) => {
             console.log(err);
             res.status(400).send();
