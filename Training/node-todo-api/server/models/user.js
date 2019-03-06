@@ -44,11 +44,27 @@ UserSchema.methods.generateAuthToken = function() {
     var access = 'auth';
     var token = jwt.sign({_id: user._id.toHexString(), access}, 'ABC123').toString();
 
-    //concat
     user.tokens.push({access, token});
 
     return user.save().then(() => {
         return token;
+    });
+};
+
+UserSchema.statics.findByToken = function(token) {
+    var User = this;
+    var decoded;
+
+    try {
+        decoded = jwt.verify(token, 'ABC123');
+    } catch (e) {
+        return Promise.reject();
+    }
+    console.log('decoded', decoded);
+    return User.findOne({
+        '_id': decoded._id,
+        'tokens.token': token,
+        'tokens.access': 'auth'
     });
 };
 
