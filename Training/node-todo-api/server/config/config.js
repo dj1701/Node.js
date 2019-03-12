@@ -8,3 +8,5 @@ if(env === 'development'){
     process.env.PORT = 4001;
     process.env.MONGODB_URI = 'mongodb://localhost:27017/TodoAppTest';
 }
+
+console.log(`Mongo URL: ${process.env.MONGODB_URI}`);
