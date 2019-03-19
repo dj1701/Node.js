@@ -134,6 +134,14 @@ module.exports.app = (port) => {
         });
     });
 
+    app.delete('/users/me/token', authenticate, (req, res) => {
+        req.user.removeToken(res.token).then(() => {
+            res.status(200).send();
+        }, () => {
+            res.status(400).send();
+        });
+    });
+
     app.server = app.listen(app.get('port'));
 
     return app;
