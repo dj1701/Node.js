@@ -5,11 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha --compilers js:babel-register specs/setup.js src/**/*spec.js specs/application-spec.js"
+    "test": "jest --watchAll"
   },
   "author": "David Jacobs",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
     "babel": "^6.5.2",
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
@@ -17,19 +22,19 @@
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.9.0",
     "chai": "^3.5.0",
-    "enzyme": "^2.6.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
+    "jest": "^24.8.0",
     "jsdom": "^9.8.3",
-    "mocha": "^3.2.0",
-    "react-addons-test-utils": "^15.4.1",
-    "should": "^11.1.1",
+    "react-dom": "^16.8.6",
     "supertest": "^2.0.1",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "express": "^4.14.0",
     "path": "^0.12.7",
-    "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react": "^16.8.6"
   }
 }

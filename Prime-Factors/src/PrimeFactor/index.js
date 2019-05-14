@@ -40,7 +40,7 @@ class PrimeFactor extends React.Component {
           <button type="button" id="find" onClick={this.findprimes}>Find Prime Factors</button>
         </div>
         <div>
-          <input type="text" id="primefactors" value={this.state.primefactors}/>
+          <input type="text" id="primefactors" readOnly value={this.state.primefactors}/>
           <button type="button" id="reset" onClick={this.reset}>Reset</button>
         </div>
     </div>

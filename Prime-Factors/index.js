@@ -6,4 +6,4 @@ const port = 4001;
 
 app(port);
 
-console.log('Listening at http://localhost:4001');
+console.log(`Listening at http://localhost:${port}`);
