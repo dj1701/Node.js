@@ -12,7 +12,7 @@ let contentType;
 
 describe('GET /private/health', () => {
 
-  before((done) => {
+  beforeAll((done) => {
       appServer = app(port);
       request(appServer)
         .get('/private/health')
@@ -25,7 +25,7 @@ describe('GET /private/health', () => {
         });
   });
 
-  after(() => {
+  afterAll(() => {
     appServer.server.close();
   });
 
@@ -37,7 +37,7 @@ describe('GET /private/health', () => {
 
 describe('GET /', () => {
 
-  before((done) => {
+  beforeAll((done) => {
     appServer = app(port);
     request(appServer)
       .get('/')
@@ -52,7 +52,7 @@ describe('GET /', () => {
 
   });
 
-  after(() => {
+  afterAll(() => {
     appServer.server.close();
   });
 
@@ -67,7 +67,7 @@ describe('GET /', () => {
 
 describe('GET /dist/bundle.js', () => {
 
-  before((done) => {
+  beforeAll((done) => {
     appServer = app(port);
     request(appServer)
       .get('/dist/bundle.js')
@@ -81,7 +81,7 @@ describe('GET /dist/bundle.js', () => {
       });
   });
 
-  after(() => {
+  afterAll(() => {
     appServer.server.close();
   })
 
@@ -90,6 +90,6 @@ describe('GET /dist/bundle.js', () => {
   });
 
   it('Should have application/javascript in content type', () => {
-    should(contentType).equal('application/javascript');
+    contentType.should.equal('application/javascript; charset=UTF-8');
   });
-})
+});
