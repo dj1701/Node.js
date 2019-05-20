@@ -1,10 +1,8 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow, mount, configure } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import PrimeFactor from './index';
-import Adapter from 'enzyme-adapter-react-16';
-
-configure({ adapter: new Adapter() });
+import '../../enzyme.config';
 
 describe('<PrimeFactor /> ', () => {
   
