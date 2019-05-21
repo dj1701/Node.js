@@ -60,7 +60,7 @@ describe('GET /', () => {
     should(statusCode).equal(200);
   });
 
-  it('Should match String Calculator title', () => {
+  it('Should match Prime Factors title', () => {
     contentText.should.match(/<title>Prime Factors<\/title>/);
   });
 });
