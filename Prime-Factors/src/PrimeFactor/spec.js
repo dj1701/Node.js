@@ -18,7 +18,7 @@ describe('<PrimeFactor /> ', () => {
 
       unitUnderTest.find("button[id='find']").simulate('click');
 
-      expect(unitUnderTest.state('primefactors')).to.eql([2,5]);
+      expect(unitUnderTest.state('primeFactors')).to.eql([2,5]);
     });
 
     it('should call onClick Event for reset to reinitialize state and fields', () => {
@@ -27,7 +27,7 @@ describe('<PrimeFactor /> ', () => {
 
       unitUnderTest.find("button[id='reset']").simulate('click');
 
-      expect(unitUnderTest.state('primefactors')).to.eql('');
+      expect(unitUnderTest.state('primeFactors')).to.eql('');
       expect(unitUnderTest.state('valueToFactorize')).to.eql(0);
     });
 
@@ -37,7 +37,7 @@ describe('<PrimeFactor /> ', () => {
 
       unitUnderTest.find("button[id='find']").simulate('click');
 
-      expect(unitUnderTest.state('primefactors')).to.eql([7,11,13]);
+      expect(unitUnderTest.state('primeFactors')).to.eql([7,11,13]);
     });
 
 });

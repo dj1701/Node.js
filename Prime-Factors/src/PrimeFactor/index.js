@@ -5,8 +5,12 @@ class PrimeFactor extends React.Component {
 
   constructor() {
     super();
-    this.state = {valueToFactorize: 0};
-    this.state = {primefactors: ''};
+
+    this.state = {
+      valueToFactorize: 0,
+      primeFactors: ''
+    }
+
     this.updateFromGiven = this.updateFromGiven.bind(this);
     this.findprimes = this.findprimes.bind(this);
     this.reset = this.reset.bind(this);
@@ -15,7 +19,7 @@ class PrimeFactor extends React.Component {
   findprimes() {
     var given = this.state.valueToFactorize;
     this.setState({
-      primefactors: primefactorengine.generate(given)
+      primeFactors: primefactorengine.generate(given)
     })
   }
 
@@ -28,7 +32,7 @@ class PrimeFactor extends React.Component {
   reset() {
     this.setState({
       valueToFactorize: 0,
-      primefactors: ''
+      primeFactors: ''
     })
   }
 
@@ -40,7 +44,7 @@ class PrimeFactor extends React.Component {
           <button type="button" id="find" onClick={this.findprimes}>Find Prime Factors</button>
         </div>
         <div>
-          <input type="text" id="primefactors" readOnly value={this.state.primefactors}/>
+          <input type="text" id="primefactors" readOnly value={this.state.primeFactors}/>
           <button type="button" id="reset" onClick={this.reset}>Reset</button>
         </div>
     </div>
