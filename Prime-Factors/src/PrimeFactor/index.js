@@ -11,25 +11,25 @@ class PrimeFactor extends React.Component {
       primeFactors: ''
     }
 
-    this.updateFromGiven = this.updateFromGiven.bind(this);
-    this.findprimes = this.findprimes.bind(this);
-    this.reset = this.reset.bind(this);
+    // this.updateFromGiven = this.updateFromGiven.bind(this);
+    // this.findprimes = this.findprimes.bind(this);
+    // this.reset = this.reset.bind(this);
   }
 
-  findprimes() {
+  findprimes = () => {
     var given = this.state.valueToFactorize;
     this.setState({
       primeFactors: primefactorengine.generate(given)
     })
   }
 
-  updateFromGiven(evt) {
+  updateFromGiven = (evt) => {
     this.setState({
       valueToFactorize: evt.target.value
     });
   }
 
-  reset() {
+  reset = () => {
     this.setState({
       valueToFactorize: 0,
       primeFactors: ''
