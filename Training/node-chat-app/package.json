@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "install": "^0.12.2"
+    "install": "^0.12.2",
+    "socket.io": "^2.2.0"
   }
 }
